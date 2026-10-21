@@ -4,20 +4,30 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Voltrace | Know where the power goes</title>
-  <meta name="description" content="Voltrace is an IoT, AI and SaaS platform that shows you where your power goes.">
+  <meta name="description" content="Voltrace is an IoT, AI and SaaS platform that shows electric cooperatives which transformers to inspect first.">
   <meta name="theme-color" content="#ffffff">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/images/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Unbounded:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="/styles.css">
-  <link rel="preload" as="image" href="/images/hero-1200.webp" imagesrcset="/images/hero-1200.webp 1200w, /images/hero-2400.webp 2400w" imagesizes="100vw">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Unbounded:wght@400&display=swap">
+  <link rel="stylesheet" href="/styles.css?v=20261022k">
 </head>
 <body>
+  <!-- Shared gradient for icon strokes -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="brand-stroke" gradientUnits="userSpaceOnUse" x1="2" y1="2" x2="22" y2="22">
+        <stop offset="0" stop-color="#f7a84a"/>
+        <stop offset=".5" stop-color="#e86a10"/>
+        <stop offset="1" stop-color="#b85410"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="/" aria-label="Voltrace home">
+      <a class="brand" href="#home" aria-label="Voltrace home">
         <img class="brand-mark" src="/images/logo-mark.png" width="130" height="160" alt="">
         <img class="brand-word" src="/images/wordmark.png" width="640" height="115" alt="Voltrace">
       </a>
@@ -29,25 +39,21 @@
 
       <nav class="site-nav" id="site-nav" aria-label="Main">
         <ul class="nav-list">
-          <li><a href="/" aria-current="page">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/services">Services</a></li>
-          <li><a href="/plans">Plans</a></li>
-          <li><a href="/partnerships">Partnerships</a></li>
+          <li><a href="#home" aria-current="true">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#plans">Plans</a></li>
+          <li><a href="#partnerships">Partnerships</a></li>
         </ul>
-        <a class="button nav-cta" href="#contact">Get in touch</a>
+        <a class="button nav-cta" href="mailto:voltrace.jumpers@gmail.com">Get in touch</a>
       </nav>
 
-      <a class="button header-cta" href="#contact">Get in touch</a>
+      <a class="button header-cta" href="mailto:voltrace.jumpers@gmail.com">Get in touch</a>
     </div>
   </header>
 
   <main>
-    <section class="hero" aria-labelledby="hero-title">
-      <svg class="hero-watermark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
-        <path d="M18.5 2 6 18.5h8.2L11.8 30 26 12.6h-8.4z"/>
-      </svg>
-
+    <section class="hero flutes" id="home" aria-labelledby="hero-title">
       <div class="container hero-inner">
         <h1 class="hero-title" id="hero-title">
           Welcome to Voltrace
@@ -64,12 +70,12 @@
               </a>
             </li>
             <li>
-              <a class="social" href="#" aria-label="Voltrace on LinkedIn">
+              <a class="social" href="https://www.linkedin.com/in/voltrace-ph-77b639445/" target="_blank" rel="noopener" aria-label="Voltrace on LinkedIn">
                 <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
               </a>
             </li>
             <li>
-              <a class="social" href="#" aria-label="Voltrace on Facebook">
+              <a class="social" href="https://www.facebook.com/profile.php?id=61595427607254" target="_blank" rel="noopener" aria-label="Voltrace on Facebook">
                 <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
               </a>
             </li>
@@ -83,14 +89,383 @@
       </div>
     </section>
 
-    <figure class="hero-photo">
-      <picture>
-        <source type="image/webp" srcset="/images/hero-1200.webp 1200w, /images/hero-2400.webp 2400w" sizes="100vw">
-        <img src="/images/hero-1200.webp" width="2400" height="1800" alt="The Voltrace team presenting an exploded 3D view of their transformer monitor to a panel.">
-      </picture>
-    </figure>
+    <section class="collage wash" aria-label="Voltrace in the lab, in the field and on screen">
+      <figure class="tile tile-a"><img src="/images/c-hardware.webp" width="900" height="675" alt="The inside of a Voltrace unit: controller, sensors and power supply in a weatherproof box."></figure>
+      <figure class="tile tile-b"><img src="/images/c-test-analyzers.webp" width="1200" height="426" alt="Power analyzers, fuses and a step-down transformer on a test board." style="object-position: 50% 50%"></figure>
+      <figure class="tile tile-c"><img src="/images/c-panel.webp" width="1200" height="900" alt="The team presenting the transformer monitor to a panel." style="object-position: 50% 58%"></figure>
+      <figure class="tile tile-d"><img src="/images/c-team.webp" width="1000" height="750" alt="The Voltrace team on campus." style="object-position: 50% 35%"></figure>
+      <figure class="tile tile-e"><img src="/images/c-workbench.webp" width="900" height="675" alt="The team building and testing hardware at a lab workbench."></figure>
+      <figure class="tile tile-f"><img src="/images/c-soldering.webp" width="900" height="1200" alt="A team member soldering a circuit board." style="object-position: 50% 60%"></figure>
+      <figure class="tile tile-g"><img src="/images/c-testbench.webp" width="1200" height="900" alt="The transformer test board at the Batangas State University testing office." style="object-position: 55% 55%"></figure>
+      <figure class="tile tile-h"><img src="/images/c-engineer.webp" width="1200" height="675" alt="The team with an electrical engineer, presenting Voltrace."></figure>
+      <figure class="tile tile-i"><img src="/images/c-exploded.webp" width="436" height="800" alt="An exploded view of the Voltrace unit, layer by layer."></figure>
+    </section>
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <figure class="about-media">
+          <div class="about-photo wash">
+            <div class="photo-fill"><img src="/images/c-workbench.webp" width="900" height="675" alt="The Voltrace team building and testing hardware at a lab workbench."></div>
+          </div>
+          <svg class="about-badge" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+            <defs>
+              <path id="badge-ring" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/>
+            </defs>
+            <text><textPath href="#badge-ring">Know where the power goes • Voltrace •</textPath></text>
+            <image href="/images/logo-mark.png" x="44" y="40" width="32" height="40"/>
+          </svg>
+        </figure>
+
+        <div>
+          <p class="eyebrow">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#e86a10" d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+            About Voltrace
+          </p>
+          <h2 class="section-title" id="about-title">Built to answer one question: where is the power going?</h2>
+
+          <div class="tab-list" role="tablist" aria-label="About Voltrace">
+            <button type="button" role="tab" id="tab-mission" aria-controls="panel-mission" aria-selected="true">Our mission</button>
+            <button type="button" role="tab" id="tab-vision" aria-controls="panel-vision" aria-selected="false" tabindex="-1">Our vision</button>
+            <button type="button" role="tab" id="tab-story" aria-controls="panel-story" aria-selected="false" tabindex="-1">Our story</button>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="panel-mission" aria-labelledby="tab-mission" tabindex="0">
+            <p>We help electric cooperatives find system loss faster. Our monitors read every transformer that matters, and our software turns those readings into a short list of where crews should inspect first, so honest customers stop paying for power they never used.</p>
+          </div>
+          <div class="tab-panel" role="tabpanel" id="panel-vision" aria-labelledby="tab-vision" tabindex="0" hidden>
+            <p>A Philippines where every kilowatt-hour can be traced, and system-loss charges no longer appear on anyone's electricity bill.</p>
+          </div>
+          <div class="tab-panel" role="tabpanel" id="panel-story" aria-labelledby="tab-story" tabindex="0" hidden>
+            <p>It started with a store owner who barely used her appliances but paid over ₱1,000 a month. She asked us, "Hindi ko naman ginagamit, bakit kailangan ko bayaran?" Her question pointed to a bigger one: where is the power going? Voltrace is our answer.</p>
+          </div>
+
+          <dl class="stats">
+            <div>
+              <dt>Estimated yearly cost tied to electricity theft</dt>
+              <dd>₱6.8B</dd>
+            </div>
+            <div>
+              <dt>Homes to check per transformer, down from thousands</dt>
+              <dd>10–50</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+  
+    <section class="services" id="services" aria-labelledby="services-title">
+      <div class="container services-grid">
+        <div class="services-intro">
+          <p class="eyebrow">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#e86a10" d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+            System-loss detection
+          </p>
+          <h2 class="section-title" id="services-title">Smarter inspections for electric cooperatives</h2>
+          <p class="lede">Voltrace brings three services together: IoT monitors on your transformers, AI that finds the loss, and SaaS that puts the results in your crews' hands. The search narrows from thousands of homes to 10 to 50 per transformer.</p>
+          <a class="button button-outline" href="mailto:voltrace.jumpers@gmail.com?subject=Voltrace%20pilot">Request a pilot</a>
+        </div>
+
+        <ul class="service-list">
+          <li class="service-card">
+            <img class="service-card-media" src="/images/card-hardware.webp" width="720" height="540" alt="" loading="lazy">
+            <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M11 9h4a2 2 0 0 0 2-2V3"/><circle cx="9" cy="9" r="2"/><path d="M7 21v-4a2 2 0 0 1 2-2h4"/><circle cx="15" cy="15" r="2"/></svg>
+            <div class="service-body">
+              <h3>IoT transformer monitoring</h3>
+              <p>A field-grade unit with three CT clamps reads voltage, current, power and energy (kWh). It saves every reading with the time, keeps it on an SD card when there's no signal, and sends it over LTE/4G.</p>
+              <a class="read-more" href="#validation">Read more</a>
+            </div>
+          </li>
+
+          <li class="service-card">
+            <img class="service-card-media" src="/images/card-analysis.webp" width="720" height="540" alt="" loading="lazy">
+            <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/><path d="m16 16-1.9-1.9"/></svg>
+            <div class="service-body">
+              <h3>AI loss detection</h3>
+              <p>AI compares each transformer's readings with your billing data, detects abnormal patterns and ranks the areas to inspect first.</p>
+              <a class="read-more" href="#validation">Read more</a>
+            </div>
+          </li>
+
+          <li class="service-card">
+            <img class="service-card-media" src="/images/card-field.webp" width="720" height="405" alt="" loading="lazy">
+            <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+            <div class="service-body">
+              <h3>SaaS platform for cooperatives</h3>
+              <p>A web dashboard gives crews daily inspection tasks and court-ready evidence files. Software, data, on-site repairs and quarterly relocation come in one monthly plan.</p>
+              <a class="read-more" href="#plans">Read more</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  
+
+    <section class="plans" id="plans" aria-labelledby="plans-title">
+      <div class="container">
+        <div class="plans-head">
+          <div>
+            <p class="eyebrow">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#e86a10" d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+              Pricing &amp; plans
+            </p>
+            <h2 class="section-title" id="plans-title">Simple pricing per transformer</h2>
+          </div>
+
+          <div class="billing-toggle" role="group" aria-label="How to pay for the unit">
+            <button type="button" data-billing="full" aria-pressed="true">Pay in full</button>
+            <button type="button" data-billing="installment" aria-pressed="false">Installment</button>
+          </div>
+        </div>
+
+        <div class="plan-grid">
+          <article class="plan" aria-labelledby="plan-unit-name">
+            <div class="plan-summary">
+              <h3 class="plan-name" id="plan-unit-name">Monitoring unit</h3>
+              <div aria-live="polite">
+                <p class="plan-price" data-full="₱14,999" data-installment="₱1,305">₱14,999</p>
+                <p class="plan-unit" data-full="One-time, per unit" data-installment="Per month for 12 months">One-time, per unit</p>
+              </div>
+              <p class="plan-desc">Pays for itself in about 5 months on a hotspot transformer.</p>
+              <svg class="plan-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6.01 18H6M10.01 18H10M15 10v4M17.84 7.17a4 4 0 0 0-5.66 0M20.66 4.34a8 8 0 0 0-11.31 0"/></svg>
+            </div>
+            <div class="plan-details">
+              <h4>What's included</h4>
+              <ul class="plan-features">
+                <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Field-grade monitoring device</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Three CT clamps</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Installation on your transformer</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>1-year warranty</li>
+              </ul>
+              <a class="button" href="mailto:voltrace.jumpers@gmail.com?subject=Voltrace%20unit%20quote">Request a quote</a>
+              <p class="plan-note" data-full="Paid once per transformer" data-installment="Includes 8% for paying over 12 months">Paid once per transformer</p>
+            </div>
+          </article>
+
+          <article class="plan plan-platform" aria-labelledby="plan-platform-name">
+            <div class="plan-summary">
+              <h3 class="plan-name" id="plan-platform-name">Voltrace platform</h3>
+              <p class="plan-price">₱799</p>
+              <p class="plan-unit">Per unit, per month</p>
+              <p class="plan-desc">Everything your crews need once the unit is installed.</p>
+              <svg class="plan-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+            </div>
+            <div class="plan-details">
+              <h4>What's included</h4>
+              <ul class="plan-features">
+                <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Software and dashboard</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Data connection over LTE</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>On-site repairs</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Quarterly relocation</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Court-ready evidence files</li>
+              </ul>
+              <a class="button" href="mailto:voltrace.jumpers@gmail.com?subject=Voltrace%20pilot">Request a pilot</a>
+              <p class="plan-note">Pay-from-recovery option available</p>
+            </div>
+          </article>
+        </div>
+
+        <p class="plans-footnote">Prices are in Philippine pesos. Ask us about a 20-unit, 12-month pilot for your cooperative.</p>
+      </div>
+    </section>
+
+    <section class="partners" id="partnerships" aria-labelledby="partners-title">
+      <div class="container">
+        <p class="eyebrow">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#e86a10" d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+          Partnerships
+        </p>
+        <h2 class="section-title" id="partners-title">The partners we're working toward</h2>
+        <p class="lede">We're reaching out to offices at Batangas State University and to the government agencies that oversee electric cooperatives and system-loss caps.</p>
+
+        <ul class="logo-grid">
+          <li class="logo-cell">
+            <span class="logo-tag">Target partner</span>
+            <img src="/images/partners/batstateu.png" width="326" height="306" alt="" loading="lazy">
+            <span class="logo-caption">Batangas State University</span>
+          </li>
+          <li class="logo-cell">
+            <span class="logo-tag">Target partner</span>
+            <span class="logo-text">CTI</span>
+            <span class="logo-caption">Center for Technopreneurship and Innovation</span>
+          </li>
+          <li class="logo-cell">
+            <span class="logo-tag">Target partner</span>
+            <img src="/images/partners/dtc.png" width="240" height="240" alt="" loading="lazy">
+            <span class="logo-caption">Digital Transformation Center</span>
+          </li>
+          <li class="logo-cell">
+            <span class="logo-tag">Target partner</span>
+            <span class="logo-text">DevOps</span>
+            <span class="logo-caption">Development Operations Office</span>
+          </li>
+          <li class="logo-cell">
+            <span class="logo-tag">Target partner</span>
+            <span class="logo-text">Varyak</span>
+            <span class="logo-caption">Varyak Office</span>
+          </li>
+          <li class="logo-cell">
+            <span class="logo-tag">Target partner</span>
+            <img src="/images/partners/nea.svg" width="120" height="120" alt="" loading="lazy">
+            <span class="logo-caption">National Electrification Administration</span>
+          </li>
+          <li class="logo-cell">
+            <span class="logo-tag">Target partner</span>
+            <img src="/images/partners/erc.svg" width="120" height="120" alt="" loading="lazy">
+            <span class="logo-caption">Energy Regulatory Commission</span>
+          </li>
+          <li class="logo-cell logo-cell-cta">
+            <a href="mailto:voltrace.jumpers@gmail.com?subject=Partnering%20with%20Voltrace">Partner with us</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="validation" id="validation" aria-labelledby="validation-title">
+      <div class="container">
+        <div class="validation-head">
+          <p class="eyebrow">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#e86a10" d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+            Validation
+          </p>
+          <h3 class="section-title" id="validation-title">Tested with the people who know the grid</h3>
+        </div>
+
+        <div class="work-grid">
+          <article class="work">
+            <div class="work-photo wash"><div class="photo-fill"><img src="/images/c-engineer.webp" width="1200" height="675" alt="The Voltrace team with Batangas State University electrical engineers, in front of a screen presenting Voltrace." loading="lazy"></div></div>
+            <h4>Consultation with BatStateU electrical engineers</h4>
+            <p>We consulted electrical engineers from Batangas State University on how Voltrace measures a transformer and flags loss.</p>
+          </article>
+          <article class="work">
+            <div class="work-photo wash"><div class="photo-fill"><img src="/images/c-panel.webp" width="1200" height="900" alt="The team presenting an exploded 3D view of the transformer monitor to a panel." loading="lazy" style="object-position: 50% 45%"></div></div>
+            <h4>Prototype demo of the transformer monitor, layer by layer</h4>
+            <p>An exploded 3D view shows panels exactly what sits inside each unit and how it reads the line.</p>
+          </article>
+          <article class="work">
+            <div class="work-photo wash"><div class="photo-fill"><img src="/images/c-testbench.webp" width="1200" height="900" alt="A transformer test board with lamps, a load switch, breakers, fuses, power analyzers and a calibrated AC power supply." loading="lazy" style="object-position: 50% 50%"></div></div>
+            <h4>Bench tests at the BatStateU testing office</h4>
+            <p>We run Voltrace on a transformer trainer with a step-down transformer, a calibrated AC supply and switchable lamp loads.</p>
+          </article>
+          <article class="work">
+            <div class="work-photo wash"><div class="photo-fill"><img src="/images/c-test-analyzers.webp" width="1200" height="426" alt="Close-up of the test board: breakers, fuses and power analyzers on both sides of the HV and LV transformer terminals." loading="lazy"></div></div>
+            <h4>Accuracy check against power analyzers</h4>
+            <p>Power analyzers on both sides of the transformer give reference readings, so we can compare Voltrace against them. Our target is ±2% accuracy.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="team" id="team" aria-labelledby="team-title">
+      <div class="container">
+        <h2 class="section-title" id="team-title">The team behind Voltrace</h2>
+
+        <div class="team-grid">
+          <figure class="member">
+            <div class="member-photo"><img src="/images/team-john-vincent-doria.webp" width="600" height="600" alt="" loading="lazy"></div>
+            <figcaption>
+              <span class="member-name">John Vincent M. Doria</span>
+              <ul class="member-awards" aria-label="Achievements">
+                <li class="is-top">Hack4Aprogress Champion</li>
+                <li>DOST STTP, CALABARZON representative</li>
+                <li>CTI SUCCESS 2026</li>
+                <li>Industry Innovation 2026</li>
+                <li>Globe Launchpad 2026</li>
+              </ul>
+            </figcaption>
+          </figure>
+          <figure class="member">
+            <div class="member-photo"><img src="/images/team-mhalik-perez.webp" width="600" height="599" alt="" loading="lazy"></div>
+            <figcaption>
+              <span class="member-name">Mhalik B. Perez</span>
+              <ul class="member-awards" aria-label="Achievements">
+                <li class="is-top">Hack4Aprogress Champion</li>
+                <li>CTI SUCCESS 2026</li>
+              </ul>
+            </figcaption>
+          </figure>
+          <figure class="member">
+            <div class="member-photo"><img src="/images/team-sofhia-asilo.webp" width="600" height="600" alt="" loading="lazy"></div>
+            <figcaption>
+              <span class="member-name">Sofhia Aubrey M. Asilo</span>
+              <ul class="member-awards" aria-label="Achievements">
+                <li class="is-top">CTI SUCCESS 2026</li>
+                <li>Globe Launchpad 2026</li>
+              </ul>
+            </figcaption>
+          </figure>
+          <figure class="member">
+            <div class="member-photo"><img src="/images/team-glenn-guinoban.webp" width="600" height="600" alt="" loading="lazy"></div>
+            <figcaption>
+              <span class="member-name">Glenn M. Guinoban</span>
+              <ul class="member-awards">
+                <li class="is-top">Startup mentor</li>
+                <li>Lecturer I, BatStateU Alangilan</li>
+                <li>Founder, Robolicious Philippines</li>
+              </ul>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="recognition">
+          <h3>Recognition</h3>
+          <ul>
+            <li class="is-top">Hack4Aprogress Champion</li>
+            <li>DOST STTP, CALABARZON representatives</li>
+            <li>CTI SUCCESS 2026</li>
+            <li>Globe Launchpad 2026</li>
+            <li>Industry Innovation 2026</li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <script src="/main.js" defer></script>
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      <div class="footer-top">
+        <a class="brand" href="#home" aria-label="Back to top">
+          <img class="brand-mark" src="/images/logo-mark.png" width="130" height="160" alt="">
+          <img class="brand-word" src="/images/wordmark.png" width="640" height="115" alt="Voltrace">
+        </a>
+      </div>
+
+      <div class="footer-grid">
+        <ul class="footer-contact">
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <div><a href="mailto:voltrace.jumpers@gmail.com">voltrace.jumpers@gmail.com</a><span>Email address</span></div>
+          </li>
+          <li>
+            <svg class="is-fill" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            <div><a href="https://www.linkedin.com/in/voltrace-ph-77b639445/" target="_blank" rel="noopener">voltrace-ph</a><span>LinkedIn</span></div>
+          </li>
+          <li>
+            <svg class="is-fill" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
+            <div><a href="https://www.facebook.com/profile.php?id=61595427607254" target="_blank" rel="noopener">Voltrace</a><span>Facebook</span></div>
+          </li>
+        </ul>
+
+        <nav class="footer-links" aria-label="Footer">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+          </ul>
+          <ul>
+            <li><a href="#plans">Plans</a></li>
+            <li><a href="#partnerships">Partnerships</a></li>
+            <li><a href="#team">Team</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Voltrace</span>
+        <span>Made at Batangas State University</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/main.js?v=20261022k" defer></script>
 </body>
 </html>
