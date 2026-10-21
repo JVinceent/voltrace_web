@@ -1,17 +1,60 @@
 # voltrace_web
 
-A minimal static "Hello, world" site, ready to deploy on Vercel. It has no build step.
+Marketing site for Voltrace. It's a static site with no build step, deployed on Vercel.
 
-## Files
+## Pages
 
-- `index.html`: the page
-- `styles.css`: styles, with light and dark mode
-- `favicon.svg`: site icon
-- `vercel.json`: Vercel config (clean URLs, so `/about` serves `about.html`)
+| Page | File | Status |
+|---|---|---|
+| Home | `index.html` | Hero done |
+| About | `about.html` | To do |
+| Services | `services.html` | To do |
+| Plans | `plans.html` | To do |
+| Partnerships | `partnerships.html` | To do |
+
+`vercel.json` turns on `cleanUrls`, so `/about` serves `about.html`.
+
+## Links to fill in
+
+These are `#` placeholders in `index.html`:
+
+- Discord (`aria-label="Voltrace on Discord"`)
+- LinkedIn (`aria-label="Voltrace on LinkedIn"`)
+- Facebook (`aria-label="Voltrace on Facebook"`)
+- Calendar booking (`aria-label="Book a call with Voltrace"`)
+- "Get in touch" points to `#contact` until the contact section exists
+
+## Brand
+
+Colors come from the Voltrace pitch deck and are defined in `styles.css` under `:root`:
+
+| Name | Hex |
+|---|---|
+| ink | `#0B1220` |
+| sun | `#FFD862` |
+| orange | `#EF9655` |
+| coral | `#E15F4B` |
+| plum | `#733045` |
+| cream | `#FFEAB1` |
+
+Fonts (Google Fonts):
+
+- **Unbounded** for headings, the tagline and buttons. It's a free stand-in for Monument Extended, the deck's headline font.
+- **Inter** for body text and navigation.
+
+## Images
+
+`images/` holds web-ready copies. The originals in `assets/` stay untouched.
+
+- `logo-mark.png`: `assets/Logo.png` with the white background removed
+- `wordmark.png`: `assets/voltrace text.png`, trimmed
+- `hero-1200.webp`, `hero-2400.webp`: `assets/image_files/assemble_3.HEIC` converted for browsers
+
+The brand gradient over the hero photo is done in CSS (`.hero-photo::after`), so you can swap the photo without editing the image.
+
+`.vercelignore` keeps `assets/`, `references/` and the pitch deck PDF out of deployments.
 
 ## Run locally
-
-Open `index.html` in a browser, or serve the folder:
 
 ```sh
 npx serve .
@@ -19,16 +62,9 @@ npx serve .
 
 ## Deploy
 
-**With the CLI:**
-
 ```sh
-npm i -g vercel
-vercel        # preview deployment
-vercel --prod # production deployment
+npx vercel        # preview
+npx vercel --prod # production
 ```
 
-**From Git:** push this folder to GitHub, GitLab or Bitbucket, then import the repo at https://vercel.com/new. Set the Framework Preset to **Other** and leave the build command and output directory empty.
-
-## Using it as a template
-
-On GitHub, open the repo's **Settings** and turn on **Template repository**. New projects can then start from **Use this template**.
+Or push to GitHub and import the repo at https://vercel.com/new (Framework Preset: **Other**, no build command).

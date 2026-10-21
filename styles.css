@@ -1,47 +1,444 @@
+/* Palette from the Voltrace pitch deck */
 :root {
-  --bg: #ffffff;
-  --fg: #111111;
-  --muted: #666666;
+  --ink: #0b1220;
+  --paper: #ffffff;
+  --sun: #ffd862;
+  --orange: #ef9655;
+  --coral: #e15f4b;
+  --plum: #733045;
+  --plum-deep: #5a2536;
+  --cream: #ffeab1;
+  --muted: #5b6475;
+  --line: #e4e6eb;
+  --ghost: #f3f4f6;
+
+  --font-display: "Unbounded", "Arial Black", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --gutter: clamp(16px, 4vw, 40px);
+  --max: 1200px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0a0a0a;
-    --fg: #ededed;
-    --muted: #a1a1a1;
-  }
-}
-
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-html,
-body {
-  margin: 0;
-  height: 100%;
+html {
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: 3px;
+}
+
+.container {
+  width: 100%;
+  max-width: calc(var(--max) + var(--gutter) * 2);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* Buttons */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 22px;
+  border-radius: 999px;
+  background: var(--plum);
+  color: var(--paper);
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.15s ease;
+}
+
+.button:hover {
+  background: var(--plum-deep);
+}
+
+/* Header */
+
+.site-header {
+  position: relative;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-height: 88px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.brand-mark {
+  width: auto;
+  height: 38px;
+}
+
+.brand-word {
+  width: auto;
+  height: 19px;
+}
+
+.site-nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-list {
+  display: flex;
+  gap: 2px;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+
+.nav-list a {
+  display: block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.nav-list a:hover {
+  color: var(--ink);
+}
+
+.nav-list a[aria-current="page"] {
+  background: var(--cream);
+  color: var(--plum);
+}
+
+.nav-cta,
+.menu-toggle {
+  display: none;
+}
+
+/* Hero */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-inner {
+  position: relative;
+  padding-top: clamp(40px, 8vw, 104px);
+  padding-bottom: clamp(36px, 5vw, 56px);
+}
+
+.hero-watermark {
+  position: absolute;
+  top: -6%;
+  right: max(var(--gutter), calc((100vw - var(--max)) / 2 + 40px));
+  width: auto;
+  height: 118%;
+  fill: var(--ghost);
+  pointer-events: none;
+}
+
+.hero-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+}
+
+.hero-title-line {
+  display: block;
+  white-space: nowrap;
+}
+
+/* The line charges from ink to the deck gradient once on load */
+.charge {
+  background-image: linear-gradient(90deg, var(--orange) 0%, var(--coral) 15%, var(--plum) 33.3%, var(--ink) 40%, var(--ink) 100%);
+  background-size: 300% 100%;
+  background-position: 0% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: charge 1.6s cubic-bezier(0.22, 0.61, 0.36, 1) 0.35s both;
+}
+
+@keyframes charge {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: 0% 0;
+  }
+}
+
+.hero-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: clamp(40px, 7vw, 96px);
+}
+
+.tagline {
+  margin: 0;
+  max-width: 22ch;
+  font-family: var(--font-display);
+  font-size: clamp(0.9375rem, 1.4vw, 1.0625rem);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+}
+
+.social {
   display: grid;
   place-items: center;
-  padding: 16px;
-  background: var(--bg);
-  color: var(--fg);
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--ink);
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-main {
-  text-align: center;
+.social:hover {
+  border-color: var(--plum);
+  color: var(--plum);
 }
 
-h1 {
-  margin: 0 0 8px;
-  font-size: clamp(2rem, 6vw, 3.5rem);
-  letter-spacing: -0.02em;
+.social svg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
 }
 
-p {
+.social svg.is-stroke {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Photo with the deck gradient washed over it */
+
+.hero-photo {
+  position: relative;
   margin: 0;
-  color: var(--muted);
+  height: clamp(320px, 64vh, 720px);
+  overflow: hidden;
+  background: var(--plum);
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 60%;
+}
+
+.hero-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, var(--sun) 0%, var(--coral) 55%, var(--plum) 100%);
+  mix-blend-mode: overlay;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+/* Tablet and below: nav collapses into a menu */
+
+@media (max-width: 900px) {
+  .header-inner {
+    min-height: 72px;
+    gap: 12px;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 44px;
+    margin-left: auto;
+    padding: 0 16px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--paper);
+    color: var(--ink);
+    font: 500 0.875rem/1 var(--font-body);
+    cursor: pointer;
+  }
+
+  .menu-toggle-bars,
+  .menu-toggle-bars::before {
+    display: block;
+    width: 14px;
+    height: 1.5px;
+    background: currentColor;
+    transition: transform 0.2s ease;
+  }
+
+  .menu-toggle-bars {
+    position: relative;
+    transform: translateY(-2.5px);
+  }
+
+  .menu-toggle-bars::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+  }
+
+  .menu-toggle[aria-expanded="true"] .menu-toggle-bars {
+    transform: translateY(0) rotate(45deg);
+  }
+
+  .menu-toggle[aria-expanded="true"] .menu-toggle-bars::before {
+    top: 0;
+    transform: rotate(-90deg);
+  }
+
+  .site-nav {
+    position: absolute;
+    top: 100%;
+    left: var(--gutter);
+    right: var(--gutter);
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    background: var(--paper);
+    box-shadow: 0 18px 40px -24px rgba(11, 18, 32, 0.35);
+  }
+
+  .site-nav.is-open {
+    display: flex;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    padding: 0;
+    border: 0;
+  }
+
+  .nav-list a {
+    padding: 12px 14px;
+    border-radius: 12px;
+    font-size: 1rem;
+  }
+
+  .hero-watermark {
+    height: 90%;
+    top: 4%;
+    opacity: 0.8;
+  }
+
+  .hero-photo {
+    height: clamp(280px, 52vh, 520px);
+  }
+}
+
+/* Phones: the header CTA moves into the menu */
+
+@media (max-width: 560px) {
+  .header-cta {
+    display: none;
+  }
+
+  .nav-cta {
+    display: inline-flex;
+  }
+
+  .brand-mark {
+    height: 32px;
+  }
+
+  .brand-word {
+    height: 15px;
+  }
+
+  .hero-title-line {
+    white-space: normal;
+  }
+
+  .hero-foot {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-photo {
+    height: 46vh;
+    min-height: 260px;
+  }
+
+  .hero-photo img {
+    object-position: 46% 62%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .charge {
+    animation: none;
+  }
+
+  * {
+    transition: none !important;
+  }
 }
