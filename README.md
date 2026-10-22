@@ -21,8 +21,7 @@ The whole site is one scrolling page, `index.html`. The menu bar stays at the to
 ## Still to fill in
 
 - Team roles for John Vincent, Mhalik and Sofhia (Team section)
-- Logos for CTI, the DevOps office and the Varyak office. Their tiles show the name for now. Add the files to `images/partners/` and swap each `logo-text` span for an `<img>`, as the BatStateU tile does.
-- Confirm the spelling and full name of the "Varyak" office
+- Logos for CTI, the DevOps office and ASTEC. Their tiles show the name for now. Add the files to `images/partners/` and swap each `logo-text` span for an `<img>`, as the BatStateU tile does.
 
 Partner logo sources: BatStateU and DTC from steerhub.batstateu.edu.ph; NEA and ERC from Wikimedia Commons. Every partner tile is labeled "Target partner": none of these partnerships are formalized yet.
 
