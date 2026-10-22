@@ -862,6 +862,42 @@ ol {
   font-size: 0.9375rem;
 }
 
+/* The accuracy test spans both columns so the chart stays readable */
+.work-wide {
+  grid-column: 1 / -1;
+}
+
+.work-chart {
+  margin: 0;
+  border: 1px solid var(--line);
+}
+
+.work-chart img {
+  width: 100%;
+  height: auto;
+}
+
+.test-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px 32px;
+  margin-top: 14px;
+}
+
+.test-facts li {
+  padding-top: 12px;
+  border-top: 2px solid transparent;
+  border-image: var(--brand-gradient) 1;
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+@media (max-width: 900px) {
+  .test-facts {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 /* Footer with contact details, after the reference's contact screen */
 
 .site-footer {

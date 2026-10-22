@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Unbounded:wght@400&display=swap">
-  <link rel="stylesheet" href="/styles.css?v=20261022k">
+  <link rel="stylesheet" href="/styles.css?v=20261022l">
 </head>
 <body>
   <!-- Shared gradient for icon strokes -->
@@ -344,15 +344,16 @@
             <h4>Prototype demo of the transformer monitor, layer by layer</h4>
             <p>An exploded 3D view shows panels exactly what sits inside each unit and how it reads the line.</p>
           </article>
-          <article class="work">
-            <div class="work-photo wash"><div class="photo-fill"><img src="/images/c-testbench.webp" width="1200" height="900" alt="A transformer test board with lamps, a load switch, breakers, fuses, power analyzers and a calibrated AC power supply." loading="lazy" style="object-position: 50% 50%"></div></div>
-            <h4>Bench tests at the BatStateU testing office</h4>
-            <p>We run Voltrace on a transformer trainer with a step-down transformer, a calibrated AC supply and switchable lamp loads.</p>
-          </article>
-          <article class="work">
-            <div class="work-photo wash"><div class="photo-fill"><img src="/images/c-test-analyzers.webp" width="1200" height="426" alt="Close-up of the test board: breakers, fuses and power analyzers on both sides of the HV and LV transformer terminals." loading="lazy"></div></div>
-            <h4>Accuracy check against power analyzers</h4>
-            <p>Power analyzers on both sides of the transformer give reference readings, so we can compare Voltrace against them. Our target is ±2% accuracy.</p>
+          <article class="work work-wide">
+            <figure class="work-chart">
+              <img src="/images/accuracy-chart.webp" width="1600" height="935" alt="Line chart: over about 3 hours, Voltrace and the reference meter both fall from 230 V to about 222 V at 14:38 and recover to 228 V, almost overlapping. Bars below show the gap at each reading between 0.10% and 0.20%, well under the 1% goal." loading="lazy">
+            </figure>
+            <h4>Accuracy test: Voltrace stayed within 0.20% of a Fluke multimeter</h4>
+            <ul class="test-facts">
+              <li>The test ran for about 3 hours.</li>
+              <li>We stepped the variac's output voltage down by hand to simulate a load curve, the voltage drop that happens during peak grid demand.</li>
+              <li>A Fluke multimeter served as the ground truth for every reading.</li>
+            </ul>
           </article>
         </div>
       </div>
@@ -468,6 +469,6 @@
     </div>
   </footer>
 
-  <script src="/main.js?v=20261022k" defer></script>
+  <script src="/main.js?v=20261022l" defer></script>
 </body>
 </html>
